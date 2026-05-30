@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "name": "Вортексис"
+  },
+  "nav": {
+    "home": "Начало",
+    "projects": "Проекти",
+    "contact": "Контакти"
+  },
+  "pages": {
+    "home": {
+      "title": "Начало"
+    },
+    "projects": {
+      "title": "Проекти"
+    },
+    "contact": {
+      "title": "Контакти"
+    }
+  },
+  "footer": {
+    "copyright": "(c) {{year}} Vortexes Ltd."
+  }
+}

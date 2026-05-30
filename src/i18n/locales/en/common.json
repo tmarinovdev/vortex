@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "name": "Vortexes"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "title": "Home"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  },
+  "footer": {
+    "copyright": "(c) {{year}} Vortexes Ltd."
+  }
+}
