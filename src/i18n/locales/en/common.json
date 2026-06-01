@@ -9,7 +9,100 @@
   },
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "hero": {
+        "eyebrow": "BCC & BUREAU VERITAS certified",
+        "title": "Accessing the inaccessible",
+        "description": "Vortexes is a premier industrial service provider specializing in high-risk access solutions. We bridge the gap between land and sea, offering elite expertise in Industrial Rope Access and Commercial Diving. Our mission is simple: to deliver precision engineering and maintenance services in environments where standard access is impossible.",
+        "primaryAction": "Contact Us",
+        "secondaryAction": "Past Projects"
+      },
+      "positioning": {
+        "title": "Above. Below. Beyond.",
+        "items": {
+          "above": {
+            "title": "Above",
+            "description": "Industrial rope access for elevated structures and difficult-to-reach worksites."
+          },
+          "below": {
+            "title": "Below",
+            "description": "Commercial diving for underwater inspections, maintenance, and subsea operations."
+          },
+          "beyond": {
+            "title": "Beyond",
+            "description": "Integrated access solutions with precision, reliability, and strict safety control."
+          }
+        }
+      },
+      "capabilities": {
+        "title": "Core Capabilities",
+        "groups": {
+          "diving": {
+            "title": "Commercial Diving",
+            "items": [
+              "Underwater inspection & class IWS",
+              "Ship husbandry",
+              "Dams & hydropower maintenance",
+              "Civil engineering and marine construction support",
+              "Salvage & recovery",
+              "ROV support services",
+              "Underwater scientific support"
+            ]
+          },
+          "ropeAccess": {
+            "title": "Industrial Rope Access & IRATA",
+            "items": [
+              "General inspection & NDT",
+              "Structural Maintenance",
+              "Coating & Surface Treatment",
+              "Confined spaces access"
+            ]
+          }
+        }
+      },
+      "safety": {
+        "title": "Safety & Standards",
+        "description": "At Vortexes, safety is not just a policy, it is our foundation. We operate under the strictest international guidelines, ensuring that every project is risk-assessed and executed with zero-incident goals.",
+        "iso": {
+          "title": "Standards",
+          "quality": "ISO 9001:2015 quality management certification",
+          "environment": "ISO 14001:2015 environmental management certification",
+          "healthSafety": "ISO 45001:2018 occupational health and safety certification"
+        },
+        "certifications": {
+          "title": "Certifications",
+          "items": [
+            "Certified by Bulgarian Construction Chamber",
+            "Certified by Bureau Veritas Marine & Offshore"
+          ]
+        }
+      },
+      "partnerReasons": {
+        "title": "Why Partner With Us",
+        "items": {
+          "versatility": {
+            "title": "Versatility",
+            "description": "One team for height, depth, and complex access works."
+          },
+          "efficiency": {
+            "title": "Efficiency",
+            "description": "Fast turnaround with minimal downtime and precise planning."
+          },
+          "expertise": {
+            "title": "Expertise",
+            "description": "Dual-skilled professionals with field-tested operational discipline."
+          },
+          "contact": {
+            "title": "Single Point of Contact",
+            "description": "Clear coordination and seamless project management."
+          }
+        }
+      },
+      "projectContact": {
+        "title": "Let's Talk About Your Project",
+        "description": "Join clients who get difficult solutions where traditional approaches are impossible.",
+        "action": "Contact Us"
+      }
     },
     "projects": {
       "title": "Projects"
@@ -19,6 +112,6 @@
     }
   },
   "footer": {
-    "copyright": "(c) {{year}} Vortexes Ltd."
+    "copyright": " {{year}} Vortexes Ltd."
   }
 }

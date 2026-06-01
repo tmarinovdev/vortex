@@ -86,7 +86,7 @@
   --chart-4: #19c37d;
   --chart-5: #f4b942;
 
-  --radius: 0.625rem;
+  --radius: 0.3125rem;
 
   --sidebar: #102636;
   --sidebar-foreground: #f4f8fb;
@@ -232,5 +232,58 @@
   ::selection {
     background: color-mix(in srgb, var(--dive-cyan) 35%, transparent);
     color: var(--fog-white);
+  }
+}
+
+@layer components {
+  .site-container {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .home-hero {
+    background-color: var(--hero-bg);
+    background-image:
+      linear-gradient(
+        90deg,
+        var(--hero-overlay-left) 0%,
+        var(--hero-overlay-mid) 42%,
+        var(--hero-overlay-soft) 72%,
+        var(--hero-overlay-right) 100%
+      ),
+      url('/images/hero-mobile.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 640px) {
+    .home-hero {
+      background-image:
+        linear-gradient(
+          90deg,
+          var(--hero-overlay-left) 0%,
+          var(--hero-overlay-mid) 38%,
+          var(--hero-overlay-soft) 68%,
+          var(--hero-overlay-right) 100%
+        ),
+        url('/images/hero-tablet.webp');
+      background-position: center right;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .home-hero {
+      background-image:
+        linear-gradient(
+          90deg,
+          var(--hero-overlay-left) 0%,
+          var(--hero-overlay-mid) 36%,
+          var(--hero-overlay-soft) 66%,
+          var(--hero-overlay-right) 100%
+        ),
+        url('/images/hero-desktop.webp');
+    }
   }
 }

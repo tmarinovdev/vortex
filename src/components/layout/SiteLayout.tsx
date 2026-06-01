@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
+import { Menu, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, Outlet, useLocation } from 'react-router'
 
+import VortexLogo from '@/assets/logo-vortexes.svg?react'
 import type { SupportedLanguage } from '@/i18n/config'
 
 const navItems = [
@@ -27,10 +29,13 @@ function getSlugFromPath(pathname: string) {
 export default function SiteLayout() {
   const { pathname } = useLocation()
   const { i18n, t } = useTranslation()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const language = getLanguageFromPath(pathname)
   const currentSlug = getSlugFromPath(pathname)
   const alternateLanguage = language === 'en' ? 'bg' : 'en'
   const year = new Date().getFullYear()
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
 
   useEffect(() => {
     if (i18n.language !== language) {
@@ -40,16 +45,24 @@ export default function SiteLayout() {
 
   return (
     <div className="bg-background text-foreground min-h-svh">
-      <header className="border-border/70 border-b">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+      <header className="border-border/70 relative z-20 border-b">
+        <div className="site-container flex items-center justify-between py-2">
           <Link
             to={getLocalizedPath('', language)}
-            className="text-foreground text-lg font-semibold tracking-wide"
+            aria-label={t('brand.name')}
+            title={t('brand.name')}
+            className="inline-flex text-[var(--icon-primary)] transition-colors hover:text-[var(--icon-secondary)]"
+            onClick={closeMobileMenu}
           >
-            {t('brand.name')}
+            <VortexLogo
+              aria-hidden="true"
+              focusable="false"
+              className="h-18 w-auto max-w-[220px] md:h-30 md:max-w-[300px]"
+            />
+            <span className="sr-only">{t('brand.name')}</span>
           </Link>
 
-          <div className="flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
             <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">
               {navItems.map((item) => (
                 <Link
@@ -69,14 +82,56 @@ export default function SiteLayout() {
               {alternateLanguage.toUpperCase()}
             </Link>
           </div>
+
+          <button
+            type="button"
+            className="border-border/70 text-primary hover:border-primary hover:text-accent inline-flex size-11 items-center justify-center rounded-md border transition-colors md:hidden"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="size-5" aria-hidden="true" />
+            ) : (
+              <Menu className="size-5" aria-hidden="true" />
+            )}
+          </button>
         </div>
+
+        {isMobileMenuOpen ? (
+          <div id="mobile-navigation" className="border-border/70 bg-background border-t md:hidden">
+            <div className="site-container py-4">
+              <nav aria-label="Mobile navigation" className="grid gap-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.slug}
+                    to={getLocalizedPath(item.slug, language)}
+                    className="text-foreground hover:text-primary rounded-md px-1 py-3 text-base font-medium transition-colors"
+                    onClick={closeMobileMenu}
+                  >
+                    {t(item.labelKey)}
+                  </Link>
+                ))}
+
+                <Link
+                  to={getLocalizedPath(currentSlug, alternateLanguage)}
+                  className="text-primary hover:text-accent rounded-md px-1 py-3 text-base font-semibold transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  {alternateLanguage.toUpperCase()}
+                </Link>
+              </nav>
+            </div>
+          </div>
+        ) : null}
       </header>
 
       <Outlet />
 
       <footer className="border-border/70 border-t">
-        <div className="text-muted-foreground mx-auto max-w-7xl px-6 py-6 text-sm">
-          {t('footer.copyright', { year })}
+        <div className="site-container text-muted-foreground py-6 text-center text-base">
+          &copy;{t('footer.copyright', { year })}
         </div>
       </footer>
     </div>
