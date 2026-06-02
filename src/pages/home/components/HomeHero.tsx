@@ -1,11 +1,18 @@
 import { ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 
 import { Button } from '@/components/ui/button'
 
+function getLocalizedPath(path: string, pathname: string) {
+  const isEnglish = pathname === '/en' || pathname.startsWith('/en/')
+
+  return isEnglish ? `/en${path}` : path
+}
+
 export default function HomeHero() {
   const { t } = useTranslation()
+  const { pathname } = useLocation()
 
   return (
     <section className="border-border/70 relative min-h-[620px] overflow-hidden border-b">
@@ -25,14 +32,14 @@ export default function HomeHero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button asChild>
-              <Link to="/contact">
+              <Link to={getLocalizedPath('/contact', pathname)}>
                 {t('pages.home.hero.primaryAction')}
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </Button>
 
             <Button variant="outline" asChild>
-              <Link to="/projects">
+              <Link to={getLocalizedPath('/projects', pathname)}>
                 {t('pages.home.hero.secondaryAction')}
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>

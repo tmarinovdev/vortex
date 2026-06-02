@@ -105,7 +105,88 @@
       }
     },
     "projects": {
-      "title": "Projects"
+      "title": "Past Projects",
+      "breadcrumbLabel": "Breadcrumb",
+      "description": "A selection of successfully completed projects across commercial diving, industrial rope access and marine operations.",
+      "types": {
+        "diving": "Commercial Diving",
+        "ropeAccess": "Industrial Rope Access"
+      },
+      "actions": {
+        "viewMore": "View more"
+      },
+      "gallery": {
+        "close": "Close gallery",
+        "next": "Next image",
+        "previous": "Previous image",
+        "imageCount": "Image {{current}} of {{total}}"
+      },
+      "items": {
+        "nekHydroFacilities": {
+          "title": "NEK EAD - Hydrotechnical Facilities and HPP/PSHPP",
+          "description": "Diving inspections, surveys and repair works on intake screens, gate valves, pressure pipelines, bottom outlets and other hydrotechnical facilities at sites including HPP Vacha II, HPP Krichim, PSHPP Orpheus, HPP Pasarel, Lukovit Reservoir, Chaira Reservoir, Golyam Beglik Reservoir, HPP Tsankov Kamak and others."
+        },
+        "dpusyaDamsOutlets": {
+          "title": "DPUSYA - Reservoirs and Bottom Outlets",
+          "description": "Diving services and construction works for improving and restoring the flow capacity of reservoir bottom outlets, including Omarski Geran - 441, Gorna Brestnitsa - 20, Blatata - 424 and Golyam Varbovnik."
+        },
+        "srednogorovoReservoir": {
+          "title": "Srednogorovo Reservoir",
+          "description": "Cleaning of the intake shaft and bottom outlet, replacement of the outlet valve and installation of a supply pipeline inside the reservoir bowl for firefighting needs."
+        },
+        "suhodol2Reservoir": {
+          "title": "Suhodol-2 Reservoir",
+          "description": "Underwater inspection and restoration of the stop valve operation."
+        },
+        "vardun2Reservoir": {
+          "title": "Vardun-2 Reservoir",
+          "description": "Restoration of the bottom outlet flow capacity."
+        },
+        "tichaReservoir": {
+          "title": "Ticha Reservoir",
+          "description": "Inspection and repair of gate facilities at the intake towers for irrigation, water supply and the bottom outlet."
+        },
+        "topolnitsaReservoir": {
+          "title": "Topolnitsa Reservoir",
+          "description": "Cleaning in front of the bottom outlet screens from trees, sediment and other obstructions."
+        },
+        "teremNavalArsenal": {
+          "title": "TEREM - Naval Arsenal Shipyard, Varna",
+          "description": "Underwater welding, sealing a breach on Floating Dock 2, ship docking, inspections, rehabilitation of underwater facilities and underwater construction works."
+        },
+        "shipDivingOperations": {
+          "title": "Ship Diving Operations",
+          "description": "Diving inspections, cleaning, installation, dismantling and repair works on the underwater parts of vessels from the fleets of GIDROSTROY LTD, Bulgarian Dredging Company and others."
+        },
+        "lenaKoleva": {
+          "title": "m/v Lena Koleva",
+          "description": "Installation and removal of sea chest blanks, diving inspection of the hull, propeller-rudder group and overboard fittings, plus cleaning of marine growth from sea chest shafts and grids."
+        },
+        "silvia": {
+          "title": "m/v Silvia",
+          "description": "Underwater cutting and welding, dismantling and installation of a grid, removal of rope wrapped around the bow thruster propeller and diving inspection of the underwater hull."
+        },
+        "batya": {
+          "title": "m/v Batya",
+          "description": "Cleaning marine growth from sea chest shafts and related bottom-side overboard fitting grids."
+        },
+        "varnaRailFerryComplex": {
+          "title": "Varna Rail Ferry Complex",
+          "description": "Diving inspection, dismantling and installation of marine fender systems related to rehabilitation, reconstruction and modernization of quay walls and adjacent infrastructure."
+        },
+        "pristaOilHolding": {
+          "title": "Prista Oil Holding EAD",
+          "description": "Execution of rock armoring over a sand cushion at a base oils terminal berth in Navigation Canal No. 1, Varna."
+        },
+        "plaschimT": {
+          "title": "Plastchim-T AD",
+          "description": "Dismantling, installation and repair of a flap valve in a water reservoir from the cooling system of a BOPP production line."
+        },
+        "instituteOceanologyBas": {
+          "title": "Institute of Oceanology - BAS",
+          "description": "Light diving activities for a field experiment under the REST COAST project, related to restoration of marine macrophytes and coastal ecosystems."
+        }
+      }
     },
     "contact": {
       "title": "Contact"
