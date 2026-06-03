@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import PageMeta from '@/components/seo/PageMeta'
 import { useAppTranslation } from '@/i18n/useAppTranslation'
 import ProjectCard from '@/pages/projects/components/ProjectCard'
 import ProjectGalleryDialog from '@/pages/projects/components/ProjectGalleryDialog'
@@ -11,8 +12,10 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-[60svh] py-12 md:py-16">
-      <title>{t('pages.projects.meta.title')}</title>
-      <meta name="description" content={t('pages.projects.meta.description')} />
+      <PageMeta
+        title={t('pages.projects.meta.title')}
+        description={t('pages.projects.meta.description')}
+      />
       <section className="site-container">
         <nav
           className="text-muted-foreground text-sm"

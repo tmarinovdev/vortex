@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router'
 
+import geistCyrillicFontUrl from '@fontsource-variable/geist/files/geist-cyrillic-wght-normal.woff2?url'
+import geistLatinFontUrl from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url'
 import '@/i18n/config'
 import { getLanguageFromPath } from '@/i18n/useAppTranslation'
 import './index.css'
@@ -12,12 +14,21 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps) {
   const { pathname } = useLocation()
   const language = getLanguageFromPath(pathname)
+  const primaryFontUrl = language === 'bg' ? geistCyrillicFontUrl : geistLatinFontUrl
 
   return (
     <html lang={language}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="preload"
+          href={primaryFontUrl}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <meta name="theme-color" content="#071826" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#050a12" media="(prefers-color-scheme: dark)" />
         <link rel="icon" href="/favicon.ico" sizes="any" />

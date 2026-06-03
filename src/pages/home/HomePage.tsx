@@ -1,3 +1,4 @@
+import PageMeta from '@/components/seo/PageMeta'
 import HomeCapabilities from '@/pages/home/components/HomeCapabilities'
 import HomeHero from '@/pages/home/components/HomeHero'
 import HomePartnerReasons from '@/pages/home/components/HomePartnerReasons'
@@ -11,8 +12,28 @@ export default function HomePage() {
 
   return (
     <main>
-      <title>{t('pages.home.meta.title')}</title>
-      <meta name="description" content={t('pages.home.meta.description')} />
+      <PageMeta title={t('pages.home.meta.title')} description={t('pages.home.meta.description')} />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-mobile.webp"
+        media="(max-width: 639px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-tablet.webp"
+        media="(min-width: 640px) and (max-width: 1024px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-desktop.webp"
+        media="(min-width: 1025px)"
+        fetchPriority="high"
+      />
       <HomeHero />
       <HomePositioning />
       <HomeCapabilities />
