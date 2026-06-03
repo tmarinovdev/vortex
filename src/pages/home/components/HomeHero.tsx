@@ -1,17 +1,11 @@
 import { ArrowRight } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router'
 
 import { Button } from '@/components/ui/button'
-
-function getLocalizedPath(path: string, pathname: string) {
-  const isEnglish = pathname === '/en' || pathname.startsWith('/en/')
-
-  return isEnglish ? `/en${path}` : path
-}
+import { getLocalizedPath, useAppTranslation } from '@/i18n/useAppTranslation'
 
 export default function HomeHero() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
   const { pathname } = useLocation()
 
   return (

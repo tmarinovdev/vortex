@@ -13,6 +13,9 @@ lerna-debug.log*
 !.env.example
 
 node_modules
+.react-router
+.tmp
+build
 dist
 dist-ssr
 *.local

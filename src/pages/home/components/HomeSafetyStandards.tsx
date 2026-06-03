@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 
 const isoBadges = [
   {
@@ -17,7 +18,7 @@ const isoBadges = [
 ]
 
 export default function HomeSafetyStandards() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
   const certifications = t('pages.home.safety.certifications.items', {
     returnObjects: true,
   }) as string[]

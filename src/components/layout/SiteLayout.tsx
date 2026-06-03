@@ -1,10 +1,13 @@
 import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router'
 
 import VortexLogo from '@/assets/logo-vortexes.svg?react'
-import type { SupportedLanguage } from '@/i18n/config'
+import {
+  getLocalizedPathForLanguage,
+  getSlugFromPath,
+  useAppTranslation,
+} from '@/i18n/useAppTranslation'
 
 const navItems = [
   { slug: '', labelKey: 'nav.home' },
@@ -12,43 +15,22 @@ const navItems = [
   { slug: 'contact', labelKey: 'nav.contact' },
 ]
 
-function getLocalizedPath(slug: string, language: SupportedLanguage) {
-  const path = slug ? `/${slug}` : '/'
-
-  return language === 'en' ? `/en${path === '/' ? '' : path}` : path
-}
-
-function getLanguageFromPath(pathname: string): SupportedLanguage {
-  return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'bg'
-}
-
-function getSlugFromPath(pathname: string) {
-  return pathname.replace(/^\/en/, '').replace(/^\//, '')
-}
-
 export default function SiteLayout() {
   const { pathname } = useLocation()
-  const { i18n, t } = useTranslation()
+  const { language, t } = useAppTranslation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const language = getLanguageFromPath(pathname)
   const currentSlug = getSlugFromPath(pathname)
   const alternateLanguage = language === 'en' ? 'bg' : 'en'
   const year = new Date().getFullYear()
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false)
 
-  useEffect(() => {
-    if (i18n.language !== language) {
-      void i18n.changeLanguage(language)
-    }
-  }, [i18n, language])
-
   return (
     <div className="bg-background text-foreground min-h-svh">
       <header className="border-border/70 relative z-20 border-b">
         <div className="site-container flex items-center justify-between py-2">
           <Link
-            to={getLocalizedPath('', language)}
+            to={getLocalizedPathForLanguage('/', language)}
             aria-label={t('brand.name')}
             title={t('brand.name')}
             className="inline-flex text-[var(--icon-primary)] transition-colors hover:text-[var(--icon-secondary)]"
@@ -67,7 +49,7 @@ export default function SiteLayout() {
               {navItems.map((item) => (
                 <Link
                   key={item.slug}
-                  to={getLocalizedPath(item.slug, language)}
+                  to={getLocalizedPathForLanguage(item.slug ? `/${item.slug}` : '/', language)}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t(item.labelKey)}
@@ -76,7 +58,10 @@ export default function SiteLayout() {
             </nav>
 
             <Link
-              to={getLocalizedPath(currentSlug, alternateLanguage)}
+              to={getLocalizedPathForLanguage(
+                currentSlug ? `/${currentSlug}` : '/',
+                alternateLanguage,
+              )}
               className="text-primary hover:text-accent text-sm font-medium transition-colors"
             >
               {alternateLanguage.toUpperCase()}
@@ -106,7 +91,7 @@ export default function SiteLayout() {
                 {navItems.map((item) => (
                   <Link
                     key={item.slug}
-                    to={getLocalizedPath(item.slug, language)}
+                    to={getLocalizedPathForLanguage(item.slug ? `/${item.slug}` : '/', language)}
                     className="text-foreground hover:text-primary rounded-md px-1 py-3 text-base font-medium transition-colors"
                     onClick={closeMobileMenu}
                   >
@@ -115,7 +100,10 @@ export default function SiteLayout() {
                 ))}
 
                 <Link
-                  to={getLocalizedPath(currentSlug, alternateLanguage)}
+                  to={getLocalizedPathForLanguage(
+                    currentSlug ? `/${currentSlug}` : '/',
+                    alternateLanguage,
+                  )}
                   className="text-primary hover:text-accent rounded-md px-1 py-3 text-base font-semibold transition-colors"
                   onClick={closeMobileMenu}
                 >

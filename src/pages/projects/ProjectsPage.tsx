@@ -1,16 +1,18 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
 
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 import ProjectCard from '@/pages/projects/components/ProjectCard'
 import ProjectGalleryDialog from '@/pages/projects/components/ProjectGalleryDialog'
 import { type Project, projects } from '@/pages/projects/data/projects'
 
 export default function ProjectsPage() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
     <main className="min-h-[60svh] py-12 md:py-16">
+      <title>{t('pages.projects.meta.title')}</title>
+      <meta name="description" content={t('pages.projects.meta.description')} />
       <section className="site-container">
         <nav
           className="text-muted-foreground text-sm"

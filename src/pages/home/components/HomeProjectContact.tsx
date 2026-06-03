@@ -1,8 +1,8 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 
 import { Button } from '@/components/ui/button'
+import { getLocalizedPath, useAppTranslation } from '@/i18n/useAppTranslation'
 
 const contactItems = [
   {
@@ -23,7 +23,8 @@ const contactItems = [
 ]
 
 export default function HomeProjectContact() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
+  const { pathname } = useLocation()
 
   return (
     <section className="bg-background py-12">
@@ -55,7 +56,9 @@ export default function HomeProjectContact() {
 
           <div className="mt-8">
             <Button asChild>
-              <Link to="/contact">{t('pages.home.projectContact.action')}</Link>
+              <Link to={getLocalizedPath('/contact', pathname)}>
+                {t('pages.home.projectContact.action')}
+              </Link>
             </Button>
           </div>
         </div>

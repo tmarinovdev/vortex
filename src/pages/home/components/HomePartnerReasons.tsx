@@ -1,5 +1,6 @@
 import { BriefcaseBusiness, Gauge, PhoneCall, Wrench } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 
 const reasons = [
   {
@@ -25,7 +26,7 @@ const reasons = [
 ]
 
 export default function HomePartnerReasons() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
 
   return (
     <section className="bg-background py-12">

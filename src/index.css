@@ -225,10 +225,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  #root {
-    min-height: 100svh;
-  }
-
   ::selection {
     background: color-mix(in srgb, var(--dive-cyan) 35%, transparent);
     color: var(--fog-white);

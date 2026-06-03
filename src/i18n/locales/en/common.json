@@ -10,6 +10,10 @@
   "pages": {
     "home": {
       "title": "Home",
+      "meta": {
+        "title": "Vortexes Ltd. - Accessing the inaccessible",
+        "description": "Industrial rope access and commercial diving services for complex marine, underwater and difficult-access environments."
+      },
       "hero": {
         "eyebrow": "BCC & BUREAU VERITAS certified",
         "title": "Accessing the inaccessible",
@@ -106,6 +110,10 @@
     },
     "projects": {
       "title": "Past Projects",
+      "meta": {
+        "title": "Past Projects - Vortexes Ltd.",
+        "description": "Selected completed commercial diving, industrial rope access and marine operation projects by Vortexes Ltd."
+      },
       "breadcrumbLabel": "Breadcrumb",
       "description": "A selection of successfully completed projects across commercial diving, industrial rope access and marine operations.",
       "types": {
@@ -189,7 +197,11 @@
       }
     },
     "contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "meta": {
+        "title": "Contact - Vortexes Ltd.",
+        "description": "Contact Vortexes Ltd. for industrial rope access, commercial diving and complex access project inquiries."
+      }
     }
   },
   "footer": {

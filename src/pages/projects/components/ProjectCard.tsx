@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
 
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 import { type Project, projectTypeFallbackIcons } from '@/pages/projects/data/projects'
 
 type ProjectCardProps = {
@@ -9,7 +9,7 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ project, onOpenGallery }: ProjectCardProps) {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
   const hasImages = project.images.length > 0
   const hasGallery = project.images.length > 1
   const coverImage = project.images[0]?.thumb ?? projectTypeFallbackIcons[project.type]

@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default defineConfig([
-  globalIgnores(['dist', 'node_modules']),
+  globalIgnores(['.react-router', '.tmp', 'build', 'dist', 'node_modules']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [

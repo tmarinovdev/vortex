@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 import type { Project } from '@/pages/projects/data/projects'
 
 type ProjectGalleryDialogProps = {
@@ -10,7 +10,7 @@ type ProjectGalleryDialogProps = {
 }
 
 export default function ProjectGalleryDialog({ project, onClose }: ProjectGalleryDialogProps) {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
   const [activeIndex, setActiveIndex] = useState(0)
   const activeImage = project.images[activeIndex]
   const hasMultipleImages = project.images.length > 1

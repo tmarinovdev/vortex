@@ -1,8 +1,7 @@
-import { useTranslation } from 'react-i18next'
-
 import AboveIcon from '@/assets/icons/above.svg?react'
 import BelowIcon from '@/assets/icons/below.svg?react'
 import BeyondIcon from '@/assets/icons/beyond.svg?react'
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 
 const items = [
   {
@@ -23,7 +22,7 @@ const items = [
 ]
 
 export default function HomePositioning() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
 
   return (
     <section className="bg-background py-12">

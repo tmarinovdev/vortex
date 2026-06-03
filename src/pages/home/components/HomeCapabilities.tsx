@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+
+import { useAppTranslation } from '@/i18n/useAppTranslation'
 
 const capabilityGroups = [
   {
@@ -13,7 +14,7 @@ const capabilityGroups = [
 ]
 
 export default function HomeCapabilities() {
-  const { t } = useTranslation()
+  const { t } = useAppTranslation()
 
   return (
     <section className="bg-background py-12">
