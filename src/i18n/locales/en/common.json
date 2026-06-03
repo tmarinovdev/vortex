@@ -198,9 +198,39 @@
     },
     "contact": {
       "title": "Contact",
+      "description": "Tell us what needs to be inspected, repaired or accessed. We will review the details and contact you as soon as possible.",
       "meta": {
         "title": "Contact - Vortexes Ltd.",
         "description": "Contact Vortexes Ltd. for industrial rope access, commercial diving and complex access project inquiries."
+      },
+      "form": {
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Your name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "you@example.com"
+          },
+          "phone": {
+            "label": "Phone",
+            "placeholder": "Optional"
+          },
+          "inquiry": {
+            "label": "Inquiry",
+            "placeholder": "Tell us about the project, location and access requirements."
+          }
+        },
+        "actions": {
+          "submit": "Send Inquiry",
+          "sending": "Sending..."
+        },
+        "status": {
+          "success": "Your inquiry was sent successfully. We will contact you soon.",
+          "error": "The inquiry could not be sent. Please check the details and try again.",
+          "network": "The connection failed. Please try again later or email us directly."
+        }
       }
     }
   },

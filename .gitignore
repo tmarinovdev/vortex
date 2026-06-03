@@ -12,6 +12,10 @@ lerna-debug.log*
 .env.*
 !.env.example
 
+# Server-only deployment files
+contacts.php
+send-email.php
+
 node_modules
 .react-router
 .tmp
