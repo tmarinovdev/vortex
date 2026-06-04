@@ -28,23 +28,27 @@ export default function SiteLayout() {
   return (
     <div className="bg-background text-foreground min-h-svh">
       <header className="border-border/70 relative z-20 border-b">
-        <div className="site-container flex items-center justify-between py-2">
+        <div className="site-container grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2 py-2">
           <Link
             to={getLocalizedPathForLanguage('/', language)}
             aria-label={t('brand.name')}
             title={t('brand.name')}
-            className="inline-flex text-[var(--icon-primary)] transition-colors hover:text-[var(--icon-secondary)]"
+            className="inline-flex justify-self-start text-[var(--icon-primary)] transition-colors hover:text-[var(--icon-secondary)]"
             onClick={closeMobileMenu}
           >
             <VortexLogo
               aria-hidden="true"
               focusable="false"
-              className="h-18 w-auto max-w-[220px] md:h-30 md:max-w-[300px]"
+              className="h-14 w-auto max-w-[100px] sm:h-18 sm:max-w-[220px] md:h-24 lg:h-30 lg:max-w-[300px]"
             />
             <span className="sr-only">{t('brand.name')}</span>
           </Link>
 
-          <div className="hidden items-center gap-8 md:flex">
+          <p className="text-foreground/80 pointer-events-none text-center text-sm leading-tight font-medium whitespace-nowrap [word-spacing:0.2rem] sm:text-base md:text-2xl">
+            {t('pages.home.positioning.title')}
+          </p>
+
+          <div className="hidden items-center gap-8 justify-self-end min-[1080px]:flex">
             <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">
               {navItems.map((item) => (
                 <Link
@@ -70,7 +74,7 @@ export default function SiteLayout() {
 
           <button
             type="button"
-            className="border-border/70 text-primary hover:border-primary hover:text-accent inline-flex size-11 items-center justify-center rounded-md border transition-colors md:hidden"
+            className="border-border/70 text-primary hover:border-primary hover:text-accent inline-flex size-11 items-center justify-center justify-self-end rounded-md border transition-colors min-[1080px]:hidden"
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
@@ -85,7 +89,10 @@ export default function SiteLayout() {
         </div>
 
         {isMobileMenuOpen ? (
-          <div id="mobile-navigation" className="border-border/70 bg-background border-t md:hidden">
+          <div
+            id="mobile-navigation"
+            className="border-border/70 bg-background border-t min-[1080px]:hidden"
+          >
             <div className="site-container py-4">
               <nav aria-label="Mobile navigation" className="grid gap-2">
                 {navItems.map((item) => (

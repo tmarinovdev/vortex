@@ -12,10 +12,6 @@ export default function HomeHero() {
     <section className="border-border/70 relative min-h-[620px] overflow-hidden border-b">
       <div className="home-hero site-container flex min-h-[620px] items-center py-20">
         <div className="max-w-3xl">
-          <p className="text-primary mb-5 text-sm font-medium tracking-[0.18em] uppercase">
-            {t('pages.home.hero.eyebrow')}
-          </p>
-
           <h1 className="text-foreground max-w-3xl text-5xl leading-[1.05] font-semibold uppercase md:text-6xl">
             {t('pages.home.hero.title')}
           </h1>
