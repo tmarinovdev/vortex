@@ -12,6 +12,7 @@ import {
 const navItems = [
   { slug: '', labelKey: 'nav.home' },
   { slug: 'projects', labelKey: 'nav.projects' },
+  { slug: 'gallery', labelKey: 'nav.gallery' },
   { slug: 'contact', labelKey: 'nav.contact' },
 ]
 
@@ -33,20 +34,25 @@ export default function SiteLayout() {
             to={getLocalizedPathForLanguage('/', language)}
             aria-label={t('brand.name')}
             title={t('brand.name')}
-            className="inline-flex justify-self-start text-[var(--icon-primary)] transition-colors hover:text-[var(--icon-secondary)]"
+            className="hover:text-foreground inline-flex justify-self-start text-[var(--muted-text)] transition-colors"
             onClick={closeMobileMenu}
           >
             <VortexLogo
               aria-hidden="true"
               focusable="false"
-              className="h-14 w-auto max-w-[100px] sm:h-18 sm:max-w-[220px] md:h-24 lg:h-30 lg:max-w-[300px]"
+              className="h-14 w-auto max-w-[100px] sm:h-18 sm:max-w-[200px] md:h-24 lg:h-30 lg:max-w-[260px]"
             />
             <span className="sr-only">{t('brand.name')}</span>
           </Link>
 
-          <p className="text-foreground/80 pointer-events-none text-center text-sm leading-tight font-medium whitespace-nowrap [word-spacing:0.2rem] sm:text-base md:text-2xl">
-            {t('pages.home.positioning.title')}
-          </p>
+          <div className="pointer-events-none grid justify-items-center text-center leading-tight">
+            <p className="text-muted-foreground text-sm font-semibold whitespace-nowrap sm:text-base md:text-2xl">
+              {t('brand.name')}
+            </p>
+            <p className="text-muted-foreground mt-1 max-w-[14rem] text-[11px] font-medium sm:max-w-none sm:text-sm sm:whitespace-nowrap md:text-base">
+              {t('brand.tagline')}
+            </p>
+          </div>
 
           <div className="hidden items-center gap-8 justify-self-end min-[1080px]:flex">
             <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">

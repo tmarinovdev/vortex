@@ -4,7 +4,16 @@ import path from 'node:path'
 const siteUrl = 'https://www.vortexes-ltd.com'
 const buildClientDir = path.resolve('build/client')
 
-const routes = ['/', '/projects', '/contact', '/en', '/en/projects', '/en/contact']
+const routes = [
+  '/',
+  '/projects',
+  '/gallery',
+  '/contact',
+  '/en',
+  '/en/projects',
+  '/en/gallery',
+  '/en/contact',
+]
 
 const escapeXml = (value) =>
   value

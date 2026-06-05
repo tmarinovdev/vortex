@@ -3,7 +3,7 @@ import { useState } from 'react'
 import PageMeta from '@/components/seo/PageMeta'
 import { useAppTranslation } from '@/i18n/useAppTranslation'
 import ProjectCard from '@/pages/projects/components/ProjectCard'
-import ProjectGalleryDialog from '@/pages/projects/components/ProjectGalleryDialog'
+import ProjectDetailsDialog from '@/pages/projects/components/ProjectDetailsDialog'
 import { type Project, projects } from '@/pages/projects/data/projects'
 
 export default function ProjectsPage() {
@@ -36,13 +36,13 @@ export default function ProjectsPage() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} onOpenGallery={setSelectedProject} />
+            <ProjectCard key={project.id} project={project} onOpenDetails={setSelectedProject} />
           ))}
         </div>
       </section>
 
       {selectedProject ? (
-        <ProjectGalleryDialog
+        <ProjectDetailsDialog
           key={selectedProject.id}
           project={selectedProject}
           onClose={() => setSelectedProject(null)}

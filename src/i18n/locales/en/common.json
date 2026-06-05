@@ -1,10 +1,12 @@
 {
   "brand": {
-    "name": "Vortexes"
+    "name": "VORTEXES LTD.",
+    "tagline": "Accessing the inaccessible"
   },
   "nav": {
     "home": "Home",
     "projects": "Projects",
+    "gallery": "Gallery",
     "contact": "Contact"
   },
   "pages": {
@@ -15,7 +17,7 @@
         "description": "Industrial rope access and commercial diving services for complex marine, underwater and difficult-access environments."
       },
       "hero": {
-        "title": "Accessing the inaccessible",
+        "title": "Who We Are",
         "description": "Vortexes is a premier industrial service provider specializing in high-risk access solutions. We bridge the gap between land and sea, offering elite expertise in Industrial Rope Access and Commercial Diving. Our mission is simple: to deliver precision engineering and maintenance services in environments where standard access is impossible.",
         "primaryAction": "Contact Us",
         "secondaryAction": "Past Projects"
@@ -42,6 +44,7 @@
         "groups": {
           "diving": {
             "title": "Commercial Diving",
+            "description": "",
             "items": [
               "Underwater inspection & class IWS",
               "Ship husbandry",
@@ -50,22 +53,25 @@
               "Salvage & recovery",
               "ROV support services",
               "Underwater scientific support"
-            ]
+            ],
+            "details": []
           },
           "ropeAccess": {
             "title": "Industrial Rope Access & IRATA",
+            "description": "",
             "items": [
               "General inspection & NDT",
               "Structural Maintenance",
               "Coating & Surface Treatment",
               "Confined spaces access"
-            ]
+            ],
+            "details": []
           }
         }
       },
       "safety": {
         "title": "Safety & Standards",
-        "description": "At Vortexes, safety is not just a policy, it is our foundation. We operate under the strictest international guidelines, ensuring that every project is risk-assessed and executed with zero-incident goals.",
+        "description": "At Vortexes Ltd., safety is not just a policy, it is our foundation. We operate under the strictest international guidelines, ensuring that every project is risk-assessed and executed with zero-incident goals.",
         "iso": {
           "title": "Standards",
           "quality": "ISO 9001:2015 quality management certification",
@@ -122,60 +128,46 @@
       "actions": {
         "viewMore": "View more"
       },
-      "gallery": {
-        "close": "Close gallery",
-        "next": "Next image",
-        "previous": "Previous image",
-        "imageCount": "Image {{current}} of {{total}}"
+      "details": {
+        "close": "Close details"
       },
       "items": {
         "nekHydroFacilities": {
-          "title": "NEK EAD - Hydrotechnical Facilities and HPP/PSHPP",
-          "description": "Diving inspections, surveys and repair works on intake screens, gate valves, pressure pipelines, bottom outlets and other hydrotechnical facilities at sites including HPP Vacha II, HPP Krichim, PSHPP Orpheus, HPP Pasarel, Lukovit Reservoir, Chaira Reservoir, Golyam Beglik Reservoir, HPP Tsankov Kamak and others."
+          "title": "NEK EAD",
+          "description": "Repair and rehabilitation of hydrotechnical facilities: dam walls, HPP/PSHPP sites, water towers, pressure derivations, pipelines, siphons, canals and related infrastructure. The works include diving inspections, surveys, installation and dismantling activities, and repairs of intake and relief facilities, bottom outlets, screens, linings, joints, steel armor, injection works and other elements.",
+          "details": [
+            "HPP Vacha II - diving inspection of the intake screen and gate valves of the Vacha II intake tower.",
+            "HPP Krichim - diving inspection of the intake screens and gate valves of the Krichim intake tower.",
+            "PSHPP Orpheus - diving inspection of intake screens HG1-HG4.",
+            "Industrial rope access inspections of pressure pipelines for HPP Aleko, HPP Byal Izvor, HPP Vacha 1, HPP Krichim, PSHPP Orpheus, HPP Vacha 2, HPP Devin, HPP Ustovo, HPP Peshtera, HPP Sestrimo, PSHPP Belmeken, PSHPP Chaira and HPP Momina Klisura.",
+            "Sealing and unsealing of a service gate in the intake tower of the headrace for HPP Teshel.",
+            "Water tower for the headrace of HPP Pasarel - structural safety survey and preparation of a working design, Iskar Reservoir.",
+            "Inspections of hydrotechnical facilities with specialized robotic equipment.",
+            "Repair of movable and fixed sealing contours of a repair gate at a bottom outlet and cleaning of rock mass in front of the screen at Lukovit Reservoir.",
+            "Underwater repair of drainage boreholes in the body of Chaira dam wall.",
+            "Underwater inspection of the bottom outlet at Golyam Beglik Reservoir.",
+            "HPP Tsankov Kamak - modernization of a flow measurement system in the pressure pipeline and installation of equipment by rope access.",
+            "Repair and restoration works on a pressure pipeline at HPP Peshtera by rope access.",
+            "Plugging a level gauge pipe and building a casing pipe for a level gauge at Krichim dam wall - design and execution."
+          ]
         },
         "dpusyaDamsOutlets": {
-          "title": "DPUSYA - Reservoirs and Bottom Outlets",
-          "description": "Diving services and construction works for improving and restoring the flow capacity of reservoir bottom outlets, including Omarski Geran - 441, Gorna Brestnitsa - 20, Blatata - 424 and Golyam Varbovnik."
-        },
-        "srednogorovoReservoir": {
-          "title": "Srednogorovo Reservoir",
-          "description": "Cleaning of the intake shaft and bottom outlet, replacement of the outlet valve and installation of a supply pipeline inside the reservoir bowl for firefighting needs."
-        },
-        "suhodol2Reservoir": {
-          "title": "Suhodol-2 Reservoir",
-          "description": "Underwater inspection and restoration of the stop valve operation."
-        },
-        "vardun2Reservoir": {
-          "title": "Vardun-2 Reservoir",
-          "description": "Restoration of the bottom outlet flow capacity."
-        },
-        "tichaReservoir": {
-          "title": "Ticha Reservoir",
-          "description": "Inspection and repair of gate facilities at the intake towers for irrigation, water supply and the bottom outlet."
-        },
-        "topolnitsaReservoir": {
-          "title": "Topolnitsa Reservoir",
-          "description": "Cleaning in front of the bottom outlet screens from trees, sediment and other obstructions."
+          "title": "State Enterprise for Dam Management",
+          "description": "Repair and rehabilitation of hydrotechnical facilities. Diving services and construction works for improving and restoring the flow capacity of reservoir bottom outlets, sediment cleaning, replacement and repair of stop valves, fabrication and installation of screens, gate panels and bulkheads, construction works on intake, inlet and outlet shafts, and installation and removal of blanks.",
+          "details": [
+            "Construction works to restore the discharge capacity of the bottom outlet at Omarski Geran - 441 Reservoir.",
+            "Construction works to improve the operating condition of the bottom outlet at Gorna Brestnitsa - 20 Reservoir.",
+            "Construction works to improve the operating condition of the bottom outlet at Blatata - 424 Reservoir.",
+            "Construction works to improve and restore the flow capacity of the bottom outlet at Golyam Varbovnik Reservoir."
+          ]
         },
         "teremNavalArsenal": {
           "title": "TEREM - Naval Arsenal Shipyard, Varna",
-          "description": "Underwater welding, sealing a breach on Floating Dock 2, ship docking, inspections, rehabilitation of underwater facilities and underwater construction works."
+          "description": "Underwater welding works, sealing breaches on floating vessels and facilities, ship docking, inspections, rehabilitation of slipways and other underwater construction works."
         },
         "shipDivingOperations": {
           "title": "Ship Diving Operations",
-          "description": "Diving inspections, cleaning, installation, dismantling and repair works on the underwater parts of vessels from the fleets of GIDROSTROY LTD, Bulgarian Dredging Company and others."
-        },
-        "lenaKoleva": {
-          "title": "m/v Lena Koleva",
-          "description": "Installation and removal of sea chest blanks, diving inspection of the hull, propeller-rudder group and overboard fittings, plus cleaning of marine growth from sea chest shafts and grids."
-        },
-        "silvia": {
-          "title": "m/v Silvia",
-          "description": "Underwater cutting and welding, dismantling and installation of a grid, removal of rope wrapped around the bow thruster propeller and diving inspection of the underwater hull."
-        },
-        "batya": {
-          "title": "m/v Batya",
-          "description": "Cleaning marine growth from sea chest shafts and related bottom-side overboard fitting grids."
+          "description": "Diving inspections, marine growth cleaning, installation and dismantling of sea chest grids, bow thrusters, repair works on propeller-rudder groups, underwater vessel parts and other ship structures."
         },
         "varnaRailFerryComplex": {
           "title": "Varna Rail Ferry Complex",
@@ -187,13 +179,36 @@
         },
         "plaschimT": {
           "title": "Plastchim-T AD",
-          "description": "Dismantling, installation and repair of a flap valve in a water reservoir from the cooling system of a BOPP production line."
+          "description": "Dismantling, installation and repair of valves in a water reservoir from the cooling system of a BOPP production line."
         },
         "instituteOceanologyBas": {
           "title": "Institute of Oceanology - BAS",
-          "description": "Light diving activities for a field experiment under the REST COAST project, related to restoration of marine macrophytes and coastal ecosystems."
+          "description": "Light diving activity for a field experiment aimed at practical restoration of marine macrophytes under project N 101037097 REST COAST - Large scale RESToration of COASTal ecosystems through rivers to sea connectivity."
+        },
+        "sofiaMunicipality": {
+          "title": "Sofia Municipality",
+          "description": "Underwater inspection and restoration of the stop valve operation at Suhodol-2 Reservoir."
+        },
+        "targovishteMunicipality": {
+          "title": "Targovishte Municipality",
+          "description": "Restoration of the flow capacity of the bottom outlet at Vardun-2 Reservoir."
         }
       }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "meta": {
+        "title": "Gallery - Vortexes Ltd.",
+        "description": "Project photography from Vortexes Ltd. commercial diving and industrial rope access work."
+      },
+      "breadcrumbLabel": "Breadcrumb",
+      "description": "A visual archive of sites, operations and working environments. Images can be opened in a larger view.",
+      "empty": "The gallery will be populated with photography from completed projects.",
+      "imageAlt": "Photo from a completed Vortexes Ltd. project.",
+      "close": "Close gallery",
+      "next": "Next image",
+      "previous": "Previous image",
+      "imageCount": "Image {{current}} of {{total}}"
     },
     "contact": {
       "title": "Contact",

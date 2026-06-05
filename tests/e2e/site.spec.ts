@@ -4,7 +4,7 @@ test('renders the Bulgarian home page', async ({ page }) => {
   await page.goto('/')
 
   await expect(page).toHaveTitle(/Vortexes Ltd/)
-  await expect(page.getByRole('heading', { name: /там където другите не могат/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Кои сме ние/i })).toBeVisible()
   await expect(page.locator('html')).toHaveAttribute('lang', 'bg')
 })
 
@@ -12,7 +12,7 @@ test('renders the English home page and language-aware project link', async ({ p
   await page.goto('/en')
 
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
-  await expect(page.getByRole('heading', { name: /accessing the inaccessible/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /who we are/i })).toBeVisible()
 
   await page.getByRole('link', { name: /past projects/i }).click()
   await expect(page).toHaveURL(/\/en\/projects$/)
@@ -24,6 +24,13 @@ test('renders project cards', async ({ page }) => {
 
   await expect(page.getByRole('heading', { name: /past projects/i })).toBeVisible()
   await expect(page.getByRole('heading', { name: /NEK EAD/i })).toBeVisible()
+})
+
+test('renders the gallery page with project images', async ({ page }) => {
+  await page.goto('/en/gallery')
+
+  await expect(page.getByRole('heading', { name: /gallery/i })).toBeVisible()
+  await expect(page.locator('img[src*="IMG_3661_s.webp"]')).toBeVisible()
 })
 
 test('submits the contact form with a mocked PHP endpoint', async ({ page }) => {

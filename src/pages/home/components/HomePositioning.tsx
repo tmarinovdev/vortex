@@ -27,10 +27,6 @@ export default function HomePositioning() {
   return (
     <section className="bg-background py-12">
       <div className="site-container">
-        <h2 className="text-foreground text-center text-3xl font-medium [word-spacing:1rem] md:text-4xl">
-          {t('pages.home.positioning.title')}
-        </h2>
-
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {items.map((item) => (
             <article
